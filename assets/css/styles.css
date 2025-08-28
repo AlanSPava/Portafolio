@@ -1,11 +1,16 @@
+/*nav responsive*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
-    background-color: #759FCB;
+    background-color: #34374C;
     color: white;
     padding: 10px 20px;
     position: relative;
@@ -36,7 +41,7 @@ h1 {
 }
 
 .nav-links a:hover {
-    color: #333;
+    color: #EE2B47;
 }
 
 .hamburger {
@@ -58,14 +63,18 @@ h1 {
         justify-content: space-between;
     }
     .nav-links {
-        display: none;
+        
         position: absolute;
         top: 100%;
         right: 0;
-        background-color: #759FCB;
+        background-color: #34374C;
         width: 100%;
         flex-direction: column;
         text-align: center;
+        overflow: hidden;       /* oculta el contenido al colapsar */
+        max-height: 0;          /* empieza cerrado */
+        transition: max-height 0.4s ease-out; /* animación suave */
+        z-index: 1000;
     }
     .nav-links li {
         margin: 15px 0;
@@ -74,7 +83,78 @@ h1 {
         display: flex;
     }
     .nav-links.show {
-        display: flex;
-        background-color: #759FCB;
+        max-height: 300px;  /* o más, dependiendo del número de enlaces */
+        background-color: #2C2E3E;
     }
+}
+
+/* Estilos para la sección Acerca de Mi */
+
+/* ===== Sección Acerca de Mi con diseño dividido ===== */
+.about-container {
+  display: flex;
+  align-items: stretch;
+  min-height: 80vh;
+  margin-top: 15px;
+}
+
+.about-left {
+  flex: 1;
+  background: url("../images/perfil.jpg") center center/cover no-repeat;
+  filter: grayscale(10%);
+  margin-left: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.about-divider {
+  width: 60px;
+  background-color: #EE2B47;
+}
+
+.about-right {
+  flex: 1.5;
+  background: #fff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-right h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-right p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-left {
+    width: 100%0;
+    height: auto;
+    min-height: 350px;
+    background-position: center t;
+    border-top-right-radius: 15px ;
+    border-bottom-right-radius: 15px;
+    margin: 5px 5px 5px 5px;
+  }
+
+  .about-divider {
+    width: 100%;
+    height: 40px;
+  }
+
+  .about-right {
+    padding: 30px 20px 30px 10px;
+  }
 }
