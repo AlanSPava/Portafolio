@@ -1,3 +1,7 @@
+body {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
 /*nav responsive*/
 * {
     margin: 0;
@@ -14,6 +18,10 @@ header {
     color: white;
     padding: 10px 20px;
     position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura que el header esté sobre otros elementos */
+    width: 100%;
 }
 
 nav {
@@ -90,12 +98,12 @@ h1 {
 
 /* Estilos para la sección Acerca de Mi */
 
-/* ===== Sección Acerca de Mi con diseño dividido ===== */
 .about-container {
   display: flex;
   align-items: stretch;
   min-height: 80vh;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .about-left {
@@ -157,4 +165,289 @@ h1 {
   .about-right {
     padding: 30px 20px 30px 10px;
   }
+}
+
+/* Seccion Habilidades */
+
+.skills-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #34374C;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;       /* apila el contenido en columna */
+  justify-content: space-between; /* empuja la barra al fondo */
+}
+
+
+.skill-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #EE2B47;
+}
+
+.skill-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  flex-grow: 1; /* el texto ocupa el espacio libre */
+
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Barra de progreso */
+.progress-bar {
+  width: 100%;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.progress {
+  height: 20px;
+  line-height: 20px;
+  text-align: right;
+  padding-right: 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 0; /* empieza cerrada */
+  transition: width 2s ease; /* animación suave */
+}
+
+/* Colores por habilidad */
+.progress.html {
+  background: linear-gradient(90deg, #34374C, #4A90E2);
+}
+
+.progress.css {
+  background: linear-gradient(90deg, #2C2E3E, #5C6B73);
+}
+
+.progress.js {
+  background: linear-gradient(90deg, #EE2B47, #FF6B6B);
+}
+
+
+.progress.frameworks {
+  background: linear-gradient(90deg, #EE2B47, #2C2E3E);
+}
+
+/* ===== Sección Proyectos ===== */
+.projects-section {
+  padding: 60px 20px;
+  background: #F6F6F6;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #34374C;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  background: linear-gradient(135deg, #34374C, #EE2B47);
+  opacity: 0.6;
+}
+
+.project-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.project-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #EE2B47;
+}
+
+.project-content p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.project-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #34374C;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #EE2B47;
+}
+
+/* ===== Sección Contacto ===== */
+.contact-section {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #34374C;
+}
+
+.contact-section p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group input {
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #EE2B47;
+  outline: none;
+}
+
+.btn-submit {
+  background: #34374C;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #EE2B47;
+}
+
+.form-status {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: #2C2E3E; /* tono oscuro de la paleta */
+  color: #ddd;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ddd;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #EE2B47; /* color acento al pasar el mouse */
+}
+
+.footer p {
+  font-size: 13px;
+  color: #bbb;
 }

@@ -1,9 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Profesional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -45,10 +50,106 @@
     </div>
   </div>
 </section>
-        <!-- Sección Habilidades -->
+
+<!-- Sección Habilidades -->
+
+<section id="skills" class="skills-section">
+  <h2>Habilidades</h2>
+  <div class="skills-container">
+    
+    <div class="skill-card">
+      <h3>HTML</h3>
+      <p>Experiencia en la creación de estructuras semánticas y optimizadas.</p>
+      <div class="progress-bar">
+        <div class="progress html">70%</div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>CSS</h3>
+      <p>Diseños responsivos, animaciones y estilos modernos con Flexbox y Grid.</p>
+      <div class="progress-bar">
+        <div class="progress css">60%</div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>JavaScript</h3>
+      <p>Desarrollo de interactividad dinámica, manejo del DOM y consumo de APIs.</p>
+      <div class="progress-bar">
+        <div class="progress js">50%</div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Frameworks</h3>
+      <p>En proceso de aprendizaje de React y otros entornos modernos de desarrollo web.</p>
+      <div class="progress-bar">
+        <div class="progress frameworks">45%</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Sección Proyectos -->
+<section id="projects" class="projects-section">
+  <h2>Proyectos</h2>
+  <div class="projects-container">
+
+    <div class="project-card">
+      <div class="project-image">
+        <img src="assets/images/proyecto1.jpg" alt="Proyecto 1">
+        <div class="project-overlay">Proyecto 1</div>
+      </div>
+      <div class="project-content">
+        <h3>Portafolio Web</h3>
+        <p>Un sitio web moderno y responsive, desarrollado con HTML, CSS y JavaScript vanilla.</p>
+        <a href="#" class="project-link">Ver proyecto →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-image">
+        <img src="assets/images/proyecto2.jpg" alt="Proyecto 2">
+        <div class="project-overlay">Proyecto 2</div>
+      </div>
+      <div class="project-content">
+        <h3>Videojuego en Scratch</h3>
+        <p>Creación de videojuego de plataformas estilo Geometry Dash.</p>
+        <a href="#" class="project-link">Ver proyecto →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Contacto -->
+<section id="contact" class="contact-section">
+  <h2>Contacto</h2>
+  <p>¿Interesado en trabajar juntos? Escríbeme y conversemos sobre tu proyecto.</p>
+
+  <form id="contact-form" class="contact-form" novalidate>
+    <div class="form-group">
+      <input type="text" id="name" name="name" placeholder="Nombre" required>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+    </div>
+    <textarea id="message" name="message" placeholder="Mensaje" rows="6" required></textarea>
+    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+  </form>
+
+  <p id="form-status" class="form-status"></p>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="https://linkedin.com/in/aspava" target="_blank">LinkedIn</a>
+    <a href="https://github.com/AlanSPava" target="_blank">GitHub</a>
+  </div>
+  <p>&copy; 2025 Alan Steven Pava Navarro. Todos los derechos reservados.</p>
+</footer>
 
 
-        </section>
 
 <script src="assets/js/script.js"></script>
 </body>
