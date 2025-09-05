@@ -451,3 +451,25 @@ h1 {
   font-size: 13px;
   color: #bbb;
 }
+
+.footer-links a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #EE2B47;
+}
+
+/* 📱 Responsive: en móviles ocultamos el texto y dejamos solo los íconos */
+@media (max-width: 600px) {
+  .footer-links .footer-text {
+    display: none;
+  }
+}
